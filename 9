@@ -1,0 +1,37 @@
+# WEEK 9: JSON / YAML GENERATION
+ 
+import json
+ 
+print("===== WEEK 9: JSON / YAML GENERATION =====")
+ 
+student = {
+    "name": "Ravi Kumar",
+    "course": "M.Tech",
+    "branch": "CSE",
+    "year": 1,
+    "skills": [
+        "Python",
+        "Machine Learning",
+        "Artificial Intelligence"
+    ]
+}
+ 
+print("\n--- JSON OUTPUT ---")
+ 
+json_output = json.dumps(student, indent=4)
+print(json_output)
+ 
+print("\n--- YAML OUTPUT ---")
+ 
+yaml_output = f"""
+name: {student['name']}
+course: {student['course']}
+branch: {student['branch']}
+year: {student['year']}
+skills:
+  - {student['skills'][0]}
+  - {student['skills'][1]}
+  - {student['skills'][2]}
+"""
+ 
+print(yaml_output)
